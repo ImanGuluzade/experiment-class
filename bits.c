@@ -14,6 +14,8 @@ int ezFiveEighths(int x);
 int isPositive(int x);
 int isLessOrEqual(int x, int y);
 int ilog2(int x);
+unsigned float_half(unsigned uf);
+int float_f2i(unsigned uf);
 
 int main() {
     // Sample usage of the functions:
@@ -70,11 +72,20 @@ int main() {
     int result13 = ilog2(32);
     printf("ilog2 result: %d\n", result13);
 
+    // Example of calling the float_half function:
+    unsigned uf = 0x40490FDB;
+    unsigned result14 = float_half(uf);
+    printf("float_half result: 0x%08X\n", result14);
+
+    // Example of calling the float_f2i function:
+    unsigned uf2 = 0xC0597800;
+    int result15 = float_f2i(uf2);
+    printf("float_f2i result: %d\n", result15);
+
     return 0;
 }
 
-// Implementations of the functions
-
+// Function implementations (You provided these earlier)
 int bitXor(int x, int y) {
     return ~(x & y) & ~(~x & ~y);
 }
@@ -143,4 +154,16 @@ int ilog2(int x) {
     x = x >> ans;
     ans ^= ((~0x5B) >> (x & 30)) & 3;
     return ans;
+}
+
+unsigned float_half(unsigned uf) {
+    // Implement this function if needed for your assignment.
+    // Return a placeholder value for now.
+    return 0;
+}
+
+int float_f2i(unsigned uf) {
+    // Implement this function if needed for your assignment.
+    // Return a placeholder value for now.
+    return 0;
 }
