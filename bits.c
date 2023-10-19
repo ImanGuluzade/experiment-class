@@ -116,7 +116,7 @@ unsigned float_half(unsigned uf) {
 }
 
 int float_f2i(unsigned uf) {
-  // EVIL TRICK: switch
+
   unsigned sign = uf & 0x80000000;
   unsigned exp = (uf >> 23) & 0xFF;
   unsigned frac = uf & 0x7FFFFF;
